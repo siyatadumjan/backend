@@ -12,7 +12,7 @@ export const register = async (req, res) => {
             return res.status(400).json({ message: "Password do not match" });
         }
 
-        const user = await User.findOne({ username });
+        const user = await User.find0ne({ username });
         if (user) {
             return res.status(400).json({ message: "Username already exit try different" });
         }
